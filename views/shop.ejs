@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min Inventory Application</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <link href="/tailwind.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo_bar">
+          <div class="sig">Br</div>
+          <div class="logo"><a class='logo_link' href="/"><h2>Neverland</h2></a></div>
+          <a href="/add" class="btn add">Add</a>
+        </div>
+        <nav class="nav_bar">
+          <ul>
+            <li><a class='nav_link'  href="/">Home</a></li>
+            <li><a class='nav_link' href="/shop">shop</a></li>
+            <li><a class='nav_link' href="/category">category</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <div class="content_wrapper">
+          <% if (products) { %>
+            <% products.forEach(function(product) {%>
+              <div class="card">
+                <div class="product_image">
+                  <img src="https://www.infoescola.com/wp-content/uploads/2019/10/paisagem-ouro-preto-1008049370.jpg" alt="">
+                </div>
+                <div class="card_content">
+                  <div class="product_info">
+                    <h3><%= product.name %></h3>
+                    <strong>Price:</strong> <span>$ <%= product.price_formatted %></span>
+                  </div>
+                  <div class="product_button">
+                    <a href="<%= product.url %>" class="btn">See</a>
+                  </div>
+                </div>
+              </div>
+              <% }); %>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

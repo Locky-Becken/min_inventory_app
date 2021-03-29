@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min Inventory Application</title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <link rel='stylesheet' href='/stylesheets/product.css' />
+
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo_bar">
+          <div class="sig">Br</div>
+          <div class="logo"><a class='logo_link' href="/"><h2>Neverland</h2></a></div>
+          <a href="/add" class="btn add">Add</a>
+        </div>
+        <nav class="nav_bar">
+          <ul>
+            <li><a class='nav_link'  href="/">Home</a></li>
+            <li><a class='nav_link' href="/shop">shop</a></li>
+            <li><a class='nav_link' href="/category">category</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="product_container">
+            <div class="product_image">
+                <img src="https://www.infoescola.com/wp-content/uploads/2019/10/paisagem-ouro-preto-1008049370.jpg" alt="">
+            </div>
+            <div class="product_content">
+                <div class="name_and_op"><h3><%= product.name %></h3> <span> <a href="/add/<%= product._id %>">Update</a></span></div>
+                <span>$ <%= product.price_formatted %></span>
+                
+                <p>Colors:</p>
+                <div class="colors">
+                    <% colors.forEach(function(color) {%>
+                        <div style=" background-color: <%= color.name %>;"  class="color"></div>
+                    <% }); %>
+                </div>
+            </div>
+      </div>
+
+      <form method="POST" class="op"> 
+        <div>
+          <input name="productid" value="<%= product._id %>"  required='true' id="productid" type="hidden"> 
+        </div>
+        <input value="Delete" class="btn" type="submit" />
+      </form>
+
+  </body>
+</html>

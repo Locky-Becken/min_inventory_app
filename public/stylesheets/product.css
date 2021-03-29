@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+  
+  :root {
+    --main-font-color: #ABB2B9;
+    --logo-color: #212F3D;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  h3{
+      color: var(--logo-color);
+  }
+
+
+  
+  .container {
+    height: 100%;
+    background-color: #fff;
+  }
+  
+  .header {
+    color: var(--main-font-color);
+  }
+  
+  .logo_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 1.25rem;
+  }
+  
+  .logo {
+    margin-left: 50px;
+  }
+  
+  .logo_link{
+    color: var(--logo-color);
+  }
+  
+  .nav_bar{
+    margin: auto;
+    width: 100%;
+  }
+  
+  .nav_bar ul{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+  }
+  
+  .nav_link {
+    color: var(--main-font-color);
+  }
+  .nav_bar ul li {
+    margin: 0 10px;
+    font-size: 1.25rem;
+  }
+  
+  .btn a {
+    color: #fff;
+  }
+  .btn {
+    background-color: #434ED5;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 5px;
+  }
+  
+
+.product_container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20% 10%;
+}
+
+.product_image{
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
+}
+
+.product_image img {
+    width: 100%;
+}
+
+.product_content {
+    
+    width: 600px;
+    height: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product_content span{
+    padding: 10px 0;
+    color: var(--main-font-color);
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--main-font-color);
+}
+
+.product_content .colors {
+    display: flex;
+}
+
+.product_content .color{
+    margin-top: 5px;
+    margin-right: 5px;
+    /* background-color: black; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.name_and_op {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name_and_op span{
+  border: none;
+}
+
+span a {
+  color: #ABB2B9;
+}
+
+span a:hover {
+  text-decoration: underline;
+}
+form .btn {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 150px;
+  border: none;
+}
