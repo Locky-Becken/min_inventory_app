@@ -16,7 +16,8 @@ var app = express();
 app.use(helmet());
 
 const mongoose = require('mongoose')
-const mongoDB  = 'mongodb+srv://inventory:dgcs9922@inventory-app.slm8d.mongodb.net/inventoryDB?retryWrites=true&w=majority'
+var dev_db_url = 'mongodb+srv://inventory:dgcs9922@inventory-app.slm8d.mongodb.net/inventoryDB?retryWrites=true&w=majority'
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})
 
